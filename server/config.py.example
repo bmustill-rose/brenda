@@ -1,0 +1,162 @@
+one = "0,948,794,950,795,1824,824,920,829,919,829,920,1719,1838,807,894,854,894,855,894,859,915,1724,920"
+two = "0,914,824,916,834,1779,851,894,850,894,854,916,1715,1816,824,920,824,920,825,920,1711,1819"
+five = "0,918,816,1807,829,921,824,920,825,916,829,920,1711,1816,825,894,851,890,1742,1846,1686,950"
+
+server_config = {
+ "commands": [
+  {
+   "name": "power",
+   "patterns": ["0,943,806,1861,785,945,807,971,785,940,811,945,1701,1843,811,945,1701,945,810,1861,798,945"]
+  },
+  {
+   "name": "vup",
+   "patterns": ["0,916,828,914,832,1813,836,915,836,915,836,915,1726,1869,1666,1843,806,971,780,949,802,944"]
+  },
+  {
+   "name": "vdown",
+   "patterns": ["0,917,828,1809,832,919,832,919,832,919,832,919,1727,1818,1723,1818,833,919,836,919,1727,919"]
+  },
+  {
+   "name": "subs",
+   "patterns": ["0,918,828,1816,832,920,833,920,833,920,833,919,1724,1820,1724,924,833,920,833,920,833,920,837,920"]
+  },
+  {
+  "name": "bbc1",
+  "patterns": [one]
+  },
+  {
+   "name": "bbc2",
+  "patterns": [two]
+  },
+  {
+   "name": "ch4",
+   "patterns": [one, five]
+  },
+  {
+   "name": "chup",
+   "patterns": ["0,943,807,963,789,1844,811,945,811,941,815,967,1684,941,815,1845,811,945,811,945,811,971,789,971"]
+  },
+  {
+   "name": "chdown",
+   "patterns": ["0,921,827,1818,832,923,832,919,837,918,832,919,1726,923,832,1821,828,923,832,919,832,923,1726,923"]
+  }
+ ],
+ "flirc": {
+  "flirc_util_path": "/usr/bin",
+  "flirc_util_binary_name": "flirc_util",
+  "additional_arguments": []
+ }
+}
+
+ui_config = {
+ "display": {
+  "touch_threshold": 4000,
+  "active_brightness": 1.0,
+  "dimmed_brightness": 0.5,
+  "dimm_after": 60 #1 minute
+ },
+ "background": {
+  "background_colour": 0xFFFFFF
+ },
+ "buttons": [
+  {
+   "x": 0,
+   "y": 0,
+   "width": 150,
+   "height": 100,
+   "name": "power",
+   "style": "ROUNDRECT",
+   "label": "POWER",
+   "label_color": 0xFFFF00,
+   "fill_color": 0xFF0000
+  },
+  {
+   "x": 160,
+   "y": 0,
+   "width": 150,
+   "height": 100,
+   "name": "bbc1",
+   "style": "ROUNDRECT",
+   "label": "BBC1",
+   "label_color": 0xFFFF00,
+   "fill_color": 0x004C99
+  },
+  {
+   "x": 320,
+   "y": 0,
+   "width": 150,
+   "height": 100,
+   "name": "bbc2",
+   "style": "ROUNDRECT",
+   "label": "BBC2",
+   "label_color": 0xFFFF00,
+   "fill_color": 0x004C99
+  },
+  {
+   "x": 0,
+   "y": 110,
+   "width": 150,
+   "height": 100,
+   "name": "vup",
+   "style": "ROUNDRECT",
+   "label": "VOL+",
+   "label_color": 0xFFFF00,
+   "fill_color": 0x004C99
+  },
+  {
+   "x": 160,
+   "y": 110,
+   "width": 150,
+   "height": 100,
+   "name": "chup",
+   "style": "ROUNDRECT",
+   "label": "CH+",
+   "label_color": 0xFFFF00,
+   "fill_color": 0x004C99
+  },
+  {
+   "x": 320,
+   "y": 110,
+   "width": 150,
+   "height": 100,
+   "name": "ch4",
+   "style": "ROUNDRECT",
+   "label": "CH 4",
+   "label_color": 0xFFFF00,
+   "fill_color": 0x004C99
+  },
+  {
+   "x": 0,
+   "y": 220,
+   "width": 150,
+   "height": 100,
+   "name": "vdown",
+   "style": "ROUNDRECT",
+   "label": "VOL-",
+   "label_color": 0xFFFF00,
+   "fill_color": 0x004C99
+  },
+  {
+   "x": 160,
+   "y": 220,
+   "width": 150,
+   "height": 100,
+   "name": "chdown",
+   "style": "ROUNDRECT",
+   "label": "CH-",
+   "label_color": 0xFFFF00,
+   "fill_color": 0x004C99
+  },
+  {
+   "x": 320,
+   "y": 220,
+   "width": 150,
+   "height": 100,
+   "name": "subs",
+   "style": "ROUNDRECT",
+   "label": "SUBS",
+   "label_color": 0xFFFF00,
+   "fill_color": 0x004C99
+  }
+ ]
+}
