@@ -21,6 +21,13 @@ def debounce(ts):
  while ts.touch_point:
   pass
 
+button_mappings = {
+ "RECT": Button.RECT,
+ "ROUNDRECT": Button.ROUNDRECT,
+ "SHADOWRECT": Button.SHADOWRECT,
+ "SHADOWROUNDRECT": Button.SHADOWROUNDRECT
+}
+
 print("booted")
 
 font = bitmap_font.load_font('/fonts/Verdana-Bold-18.bdf')
@@ -66,7 +73,7 @@ for b in ui_config['buttons']:
   width = b['width'],
   height = b['height'],
   name = b['name'],
-  style = Button.ROUNDRECT,
+  style = button_mappings[b['style']],
   label = b['label'],
   label_color = b['label_color'],
   label_font = font,
