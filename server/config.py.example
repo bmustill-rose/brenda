@@ -56,6 +56,9 @@ ui_config = {
   (1760, 0.05),
   (2349, 0.1)
  ],
+ "on_press_sound_sequence": [
+  (1175, 0.05)
+ ],
  "display": {
   "touch_threshold": 4000,
   "active_brightness": 1.0,
