@@ -50,6 +50,12 @@ server_config = {
 }
 
 ui_config = {
+ "startup_sound_sequence": [
+  (1175, 0.05),
+  (1480, 0.05),
+  (1760, 0.05),
+  (2349, 0.1)
+ ],
  "display": {
   "touch_threshold": 4000,
   "active_brightness": 1.0,
