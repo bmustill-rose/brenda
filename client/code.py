@@ -12,7 +12,6 @@ import adafruit_touchscreen
 
 import screensaver
 from secrets import secrets
-from tones import tones
 
 def play_sound_sequence(sequence):
  for note in sequence:
@@ -92,7 +91,6 @@ while True:
     if b.contains(p):
      b.selected = True
      try:
-      play_sound_sequence([(tones[b.name], 0.05)])
       with wifi.get(f"{secrets['server_url']}/cmd/{b.name}") as resp:
        print(f"{b.label}: {resp.text.rstrip()}")
       debounce(ts) #touch held within button
