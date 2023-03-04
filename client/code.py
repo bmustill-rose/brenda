@@ -76,7 +76,7 @@ for b in ui_config['buttons']:
 for b in buttons: ui.append(b)
 
 print("Ready")
-if 'startup_sound' in secrets: play_sound_sequence(secrets['startup_sound'])
+if 'startup_sound_sequence' in ui_config: play_sound_sequence(ui_config['startup_sound_sequence'])
 
 while True:
  if screensaver.is_time_to_go_to_sleep(): screensaver.go_to_sleep()
