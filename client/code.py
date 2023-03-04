@@ -91,6 +91,7 @@ while True:
     if b.contains(p):
      b.selected = True
      try:
+      if 'on_press_sound_sequence' in ui_config: play_sound_sequence(ui_config['on_press_sound_sequence'])
       with wifi.get(f"{secrets['server_url']}/cmd/{b.name}") as resp:
        print(f"{b.label}: {resp.text.rstrip()}")
       debounce(ts) #touch held within button
