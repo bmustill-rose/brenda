@@ -1,0 +1,13 @@
+[Unit]
+Description=BRENDA server service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+ExecStart=/home/pi/.local/bin/flask --app /home/pi/server/app run --host=0.0.0.0
+
+[Install]
+WantedBy=multi-user.target
